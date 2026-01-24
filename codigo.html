@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagamento PIX</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #EE3A43;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            margin: 10px;
+            border-radius: 14px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #2d3436;
+        }
+
+        p {
+            font-size: 14px;
+            color: #636e72;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #2d3436;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #00b894;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #019874;
+        }
+
+        .mensagem {
+            margin-top: 15px;
+            color: #00b894;
+            font-size: 14px;
+            display: none;
+            font-weight: bold;
+        }
+
+        .loading {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #0984e3;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pagamento via PIX</h1>
+
+        <p>
+            Para confirmar seu pedido, copie o código PIX abaixo e finalize o pagamento no seu aplicativo bancário.
+        </p>
+
+        <div class="info">
+            🍔 Após a confirmação do pagamento, você será automaticamente redirecionado para acompanhar o status do seu lanche:<br><br>
+            ✔ Pedido recebido<br>
+            ✔ Em preparo<br>
+            ✔ Saiu para entrega
+        </div>
+
+        <button onclick="copiarPix()">Copiar código PIX</button>
+
+        <div class="mensagem" id="msg">
+            ✅ Código PIX copiado! Finalize o pagamento.
+        </div>
+
+        <div class="loading" id="loading">
+            ⏳ Aguardando confirmação do pagamento...
+        </div>
+    </div>
+
+    <script>
+        function copiarPix() {
+            const codigoPix = "00020126580014BR.GOV.BCB.PIX0136642b77d4-ecc7-4776-a445-cb012d0268c5520400005303986540539.995802BR5924DIEGO JOSE SANTOS VEIGAS6008Altamira61086837473062070503***63043C0F";
+
+            navigator.clipboard.writeText(codigoPix).then(() => {
+                document.getElementById("msg").style.display = "block";
+                document.getElementById("loading").style.display = "block";
+            });
+        }
+    </script>
+
+</body>
+</html>
