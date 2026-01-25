@@ -4,10 +4,17 @@
   box-sizing: border-box;
 }
 
+body{
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
 header{
   padding: 10px;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 55px;
   background-color: #EE3A43;
   color: #fff;
@@ -25,21 +32,35 @@ header img{
   border-radius: 100%;
 }
 
+/* MAIN */
 main{
-  
+  width: 100%;
+}
+
+/* CONTAINER */
+.sessao-compra{
+  width: 100%;
+}
+
+/* IMAGEM */
+.img-combo{
+  width: 100%;
 }
 
 .combo{
-  width: 360px;
-  height: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
+/* BOTÃO */
 main button{
   padding: 15px;
   width: 100%;
   background-color: #008000;
   border: none;
   color: #fff;
+  font-size: 16px;
 }
 
 main button:hover{
@@ -47,6 +68,21 @@ main button:hover{
   color: black;
 }
 
+/* BLOCO CONFIANÇA */
+.info-pizzaria{
+  margin: 20px 15px 90px 15px; /* espaço pro footer */
+  padding: 15px;
+  background-color: #fff3f3;
+  border-radius: 8px;
+}
+
+.info-pizzaria p{
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* FOOTER FIXO */
 footer{
   background-color: #EE3A43;
   color: white;
@@ -56,3 +92,9 @@ footer{
   bottom: 0;
   width: 100%;
 }
+
+footer a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  }
