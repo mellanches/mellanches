@@ -1,45 +1,68 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Endereço de entrega</title>
-    <link rel="stylesheet" href="endereco-entrega.css"
-  </head>
-  
-  <body>
-    <form>
-      <h1>Seu endereço</h1>
-      <div>
-        <label>Nome</label><br>
-        <input type="text" placeholder="Digite seu nome">
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Endereço de Entrega</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="endereco-entrega.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <a href="index.html" class="voltar">&#8592;</a>
+    <h1>Endereço de entrega</h1>
+    <span></span>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="container">
+
+    <form class="card-form">
+
+      <h2>Onde vamos entregar? 📍</h2>
+
+      <div class="campo">
+        <label>Nome completo</label>
+        <input type="text" placeholder="Ex: João da Silva" required>
       </div>
-      
-      <div>
-        <label>Cep</label><br>
-        <input type="number" placeholder="Digite seu cep">
+
+      <div class="campo">
+        <label>Telefone</label>
+        <input type="tel" placeholder="(00) 00000-0000" required>
       </div>
-      
-      <div>
-        <label>Bairro</label><br>
-        <input type="text" placeholder="Digite seu bairro">
+
+      <div class="campo">
+        <label>Rua / Avenida</label>
+        <input type="text" placeholder="Nome da rua" required>
       </div>
-      
-      <div>
-        <label>Rua</label><br>
-        <input type="text" placeholder="Digite sua rua">
+
+      <div class="linha">
+        <div class="campo">
+          <label>Número</label>
+          <input type="text" placeholder="123" required>
+        </div>
+
+        <div class="campo">
+          <label>Bairro</label>
+          <input type="text" placeholder="Seu bairro" required>
+        </div>
       </div>
-      
-      <div>
-        <label>Numero</label><br>
-        <input type="number" placeholder="Digite sua rua">
+
+      <div class="campo">
+        <label>Complemento</label>
+        <input type="text" placeholder="Apartamento, casa, bloco">
       </div>
-      
-      <div>
-        <label>Complemento</label><br>
-        <input type="number" placeholder="Digite sua rua">
+
+      <div class="campo">
+        <label>Ponto de referência</label>
+        <input type="text" placeholder="Ex: perto do mercado">
       </div>
-      
-      <a href="codigo.html">Finalizar pagamento</a>
+
+      <button type="submit">Confirmar endereço</button>
+
     </form>
-  </body>
+
+  </main>
 </html>
